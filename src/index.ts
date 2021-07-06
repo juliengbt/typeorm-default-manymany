@@ -44,15 +44,11 @@ async function main () {
   const object: UsersObject = {
     id: objectId
   };
-
-  console.log("1")
   
   console.log(await objectRepo.createQueryBuilder()
   .select()
   .where("id = :id", { id: objectId })
   .getOne());
-  
-  console.log("2")
 
   // Updating user.objects
   // Fails on save: tries to insert (default, object.id)  instead (user.id, object.id)
