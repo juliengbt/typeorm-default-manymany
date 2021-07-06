@@ -1,0 +1,24 @@
+{
+  "name": "line-salvage",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "tsc -p tsconfig.json && node build/index.js",
+    "tslint:fix": "yarn run tslint --fix",
+    "tslint": "./node_modules/.bin/tslint -p tsconfig.json -c tslint.json --exclude '**/*.d.ts' --exclude 'node_modules/**/*.ts' 'src/**/*.ts'"
+  },
+  "author": "juliengbt",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "typeorm": "^0.2.34"
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "ts-node": "^10.0.0",
+    "tslint": "^6.1.3",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^4.3.5"
+  }
+}
